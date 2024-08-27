@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
     font-family: Verdana;
     text-align: center;
@@ -11,4 +12,19 @@ body{
 
 .myLabels {
     font-size: 3em;
+=======
+body{
+    font-family: Verdana;
+    text-align: center;
+}
+
+#myButton {
+    font-size: 3em;
+    padding: 5px 25px;
+    border-radius: 5px;
+}
+
+.myLabels {
+    font-size: 3em;
+>>>>>>> 8aabc23 (Updating and mergin files. Removing Tet from outside <html> & footer text.)
 }
