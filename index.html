@@ -1,0 +1,143 @@
+Landing Page HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tools Suite</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --background-color: #ecf0f1;
+            --text-color: #34495e;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        .tool-list {
+            list-style-type: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .tool-item {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .tool-item:hover {
+            transform: translateY(-5px);
+        }
+        .tool-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .tool-description {
+            font-size: 0.9rem;
+        }
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            .tool-list {
+                grid-template-columns: 1fr;
+            }
+            .tool-item {
+                padding: 0.8rem;
+            }
+            .tool-link {
+                font-size: 1rem;
+            }
+            .tool-description {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JavaScript Tools Suite</h1>
+    </header>
+    <div class="container">
+        <ul class="tool-list">
+            <li class="tool-item">
+                <a href="Temperature Conversion Pro/index.html" class="tool-link">Temperature Conversion Pro</a>
+                <p class="tool-description">Convert temperatures between Celsius, Fahrenheit, and Kelvin with ease.</p>
+            </li>
+            <li class="tool-item">
+                <a href="Random Password Gen/index.html" class="tool-link">Random Password Generator</a>
+                <p class="tool-description">Create strong, secure passwords with customizable options.</p>
+            </li>
+            <li class="tool-item">
+                <a href="Random Number Gen/index.html" class="tool-link">Random Number Generator</a>
+                <p class="tool-description">Generate random numbers within specified ranges for various applications.</p>
+            </li>
+            <li class="tool-item">
+                <a href="Guessing The Number/index.html" class="tool-link">Number Guessing Game</a>
+                <p class="tool-description">Test your intuition by guessing a randomly generated number.</p>
+            </li>
+            <li class="tool-item">
+                <a href="Dice Rolling Game/index.html" class="tool-link">Dice Rolling Game</a>
+                <p class="tool-description">Simulate rolling dice for board games or decision making.</p>
+            </li>
+        </ul>
+    </div>
+    <footer>
+        <p>James McKay </p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toolItems = document.querySelectorAll('.tool-item');
+            toolItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    item.style.backgroundColor = '#f1c40f';
+                    setTimeout(() => {
+                        item.style.backgroundColor = 'white';
+                    }, 300);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
